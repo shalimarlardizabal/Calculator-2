@@ -16,36 +16,36 @@ while True:
     
     else:
         operator = tokens[0]
-        num1 = tokens[1]
+        num1 = float(tokens[1])
         result= None
     
         if len(tokens) < 3:
             num2= "0"
         else:
-            num2 = tokens[2]
+            num2 = float(tokens[2])
 
         if operator == "+":
-            result= add(float(num1), float(num2))
+            result= add(num1, num2)
         
         elif operator == "-":
-            result= subtract(float(num1), float(num2))
+            result= subtract(num1, num2)
         
         elif operator == "*":
-            result= multiply(float(num1), float(num2))
+            result= multiply(num1, num2)
 
         elif operator == "/":
-            result= divide(float(num1), float(num2))
+            result= divide(num1, num2)
         
         elif operator == "square":
-            result= square(float(num1))
+            result= square(num1)
     
         elif operator == "cube": 
-            result= cube(float(num1))
+            result= cube(num1)
         
         elif operator == "pow":
-            result= power(float(num1), float(num2))
+            result= power(num1, num2)
         
         elif operator == "mod":
-            result= mod(float(num1), float(num2))
+            result= mod(num1, num2)
 
         print(result)
